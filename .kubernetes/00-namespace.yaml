@@ -1,0 +1,8 @@
+# Namespace para la petición Firmas La Paz
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: firmaslapaz
+  labels:
+    app: firmaslapaz
+    environment: production

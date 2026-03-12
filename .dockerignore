@@ -1,0 +1,14 @@
+# Git y IDE
+.git
+.gitignore
+.cursor
+*.md
+.kubernetes
+
+# Originales fuera de public (no se copian al build)
+peticion_change_la_paz.html
+código-qr-de-la-petición.png
+
+# Otros
+Dockerfile
+.dockerignore

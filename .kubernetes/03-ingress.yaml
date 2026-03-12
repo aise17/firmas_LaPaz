@@ -1,0 +1,32 @@
+# Ingress para el frontend de la petición La Paz
+# Configura el host (ej. firmas.lapaz.ejemplo.es) y apunta el DNS al Load Balancer del cluster.
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: firmaslapaz-ingress
+  namespace: firmaslapaz
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+    nginx.ingress.kubernetes.io/limit-rps: "50"
+    nginx.ingress.kubernetes.io/limit-connections: "30"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - lapazsincolapso.es
+      secretName: firmaslapaz-tls
+  rules:
+    - host: lapazsincolapso.es
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-service
+                port:
+                  number: 80
