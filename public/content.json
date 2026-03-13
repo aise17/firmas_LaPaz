@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "La Paz sin colapso — Contenido para lectores automáticos e IA",
+  "type": "object",
+  "description": "Versión estructurada del contenido de https://lapazsincolapso.es para que asistentes de IA y crawlers puedan leer y resumir la página.",
+  "url": "https://lapazsincolapso.es/",
+  "language": "es-ES",
+  "siteName": "La Paz sin colapso",
+  "pageTitle": "Petición | Aparcamiento digno para los trabajadores de La Paz",
+  "summary": "Firma la petición por un aparcamiento digno para los trabajadores del Hospital La Paz. Soluciones urgentes ya. Campaña en Change.org.",
+  "callToAction": {
+    "primary": {
+      "label": "Firmar en Change.org",
+      "url": "https://www.change.org/lapazsincolapso"
+    }
+  },
+  "alternateFormats": {
+    "markdown": "https://lapazsincolapso.es/content.md",
+    "html": "https://lapazsincolapso.es/"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "heading": "Soluciones urgentes ya para el aparcamiento en el Hospital La Paz",
+      "intro": "Trabajar en La Paz no debería significar perder tiempo, dinero y salud solo para poder aparcar. Sin embargo, esa es la realidad diaria de cientos de profesionales sanitarios, agravada por las obras, la presión del entorno y la falta de medidas suficientes para garantizar una movilidad digna.",
+      "points": [
+        { "title": "Capacidad insuficiente", "text": "La capacidad histórica del parking de personal ronda las 502 plazas frente a una realidad laboral de miles de profesionales." },
+        { "title": "Presión diaria real", "text": "La movilidad del entorno hospitalario combina personal, pacientes y acompañantes en un mismo foco de congestión." },
+        { "title": "Obras y disrupciones", "text": "Las obras recientes y los cambios en accesos y transporte han agravado todavía más la incertidumbre diaria." }
+      ]
+    },
+    {
+      "id": "diagnostico",
+      "heading": "Qué está pasando realmente",
+      "intro": "El problema no responde a una sola causa. Es el resultado de un desajuste estructural entre la demanda real, las plazas disponibles, las restricciones del entorno y las disrupciones provocadas por las obras y los accesos.",
+      "items": [
+        { "title": "Demanda muy superior a la oferta", "text": "La Paz mueve a miles de trabajadores y atiende además un enorme flujo de pacientes y acompañantes. La capacidad histórica del parking de personal resulta claramente insuficiente frente al volumen real de desplazamientos diarios." },
+        { "title": "La calle tampoco resuelve el problema", "text": "El estacionamiento regulado del entorno está pensado para rotación socio-sanitaria, no para jornadas completas. Eso obliga a mover el coche, asumir riesgo de sanción o renunciar a esa alternativa." },
+        { "title": "Las obras han empeorado la situación", "text": "Los cambios en edificios, accesos y transporte público han añadido incertidumbre, más tráfico, más presión sobre el barrio y más dificultades para llegar al hospital con normalidad." }
+      ]
+    },
+    {
+      "id": "peticion",
+      "heading": "Texto de la petición",
+      "body": "Los trabajadores del Hospital Universitario La Paz llevan años sufriendo un grave problema de aparcamiento que dificulta cada día su llegada al puesto de trabajo. No hablamos de una molestia menor, sino de una situación que afecta a profesionales sanitarios y personal esencial que deben soportar retenciones de tráfico, vueltas interminables para encontrar plaza, costes elevados en parkings y un estrés constante antes incluso de empezar su jornada. La capacidad de aparcamiento es claramente insuficiente para una plantilla de miles de trabajadores, y las alternativas en superficie tampoco resuelven esta necesidad por las limitaciones horarias existentes en la zona. Además, esta situación se ha agravado con el reciente inicio de las obras en los edificios del Hospital La Paz y con la falta de previsión y planificación para facilitar la movilidad del personal en un momento especialmente delicado. El problema se vuelve todavía más duro en turnos de noche, mañanas tempranas, cambios de turno y durante incidencias en el transporte. Por ello, pedimos a la Dirección del Hospital La Paz, a la Comunidad de Madrid y al Ayuntamiento de Madrid que actúen de forma urgente y coordinada para poner en marcha soluciones reales."
+    },
+    {
+      "id": "exigencias",
+      "heading": "Lo que exigimos",
+      "medidasUrgentes": [
+        "Plan inmediato de aparcamiento para la plantilla, con gestión real de accesos, colas y criterios transparentes.",
+        "Publicación clara del número de plazas disponibles, criterios de asignación, alternativas temporales y evolución durante las obras.",
+        "Reserva o concertación de plazas adicionales en parkings cercanos con condiciones asumibles para el personal.",
+        "Refuerzo de lanzaderas y conexiones adaptadas también a turnos de mañana temprana, tarde, noche y festivos."
+      ],
+      "solucionesObras": [
+        "Negociar con el Ayuntamiento que el personal pueda aparcar en zona sanitaria y zona verde durante toda su jornada mientras duren las obras.",
+        "Integrar la accesibilidad del personal como infraestructura crítica en el futuro desarrollo hospitalario y de la Ciudad de la Salud.",
+        "Diseñar una solución estructural que reduzca la congestión del entorno y proteja también a pacientes y vecinos."
+      ],
+      "plazos": {
+        "corto": "Mejorar accesos, ordenar colas, transparentar criterios, concertar plazas externas y reforzar lanzaderas.",
+        "medio": "Crear capacidad efectiva adicional con acuerdos externos y alternativas conectadas para personal.",
+        "largo": "La remodelación futura del hospital debe contemplar aparcamiento y accesibilidad como parte central del sistema."
+      }
+    }
+  ],
+  "media": {
+    "video": {
+      "title": "El atasco del hospital",
+      "url": "https://lapazsincolapso.es/El_atasco_del_hospital.mp4",
+      "type": "video/mp4"
+    },
+    "audio": {
+      "title": "El caos del parking en La Paz",
+      "url": "https://lapazsincolapso.es/El_caos_del_parking_en_La_Paz.m4a",
+      "type": "audio/mp4"
+    }
+  },
+  "downloads": [
+    { "label": "Folleto de la petición", "url": "https://lapazsincolapso.es/petition-flyer-c.pdf", "format": "PDF" },
+    { "label": "Blueprint de Movilidad La Paz", "url": "https://lapazsincolapso.es/Blueprint_de_Movilidad_La_Paz.pdf", "format": "PDF" },
+    { "label": "Blueprint de Movilidad La Paz", "url": "https://lapazsincolapso.es/Blueprint_de_Movilidad_La_Paz.pptx", "format": "PPTX" }
+  ],
+  "updated": "2025-03-12"
+}

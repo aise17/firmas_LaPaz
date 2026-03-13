@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Contenido para IA y lectores automáticos (formato estructurado y texto)
+Allow: /content.json
+Allow: /content.md
+
 Sitemap: https://lapazsincolapso.es/sitemap.xml
