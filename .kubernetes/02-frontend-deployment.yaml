@@ -27,7 +27,7 @@ spec:
       #   - name: docker-registry-secret
       containers:
         - name: frontend
-          image: ghcr.io/aise17/firmaslapaz-frontend:main-fc7213d
+          image: ghcr.io/aise17/firmaslapaz-frontend:main-707251d
           imagePullPolicy: Always
           ports:
             - containerPort: 80

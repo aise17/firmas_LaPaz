@@ -892,6 +892,152 @@
       opacity: 0.85;
     }
 
+    /* Informe analítico */
+    .report-intro {
+      max-width: 720px;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin-bottom: 28px;
+    }
+
+    .report-block {
+      margin-bottom: 32px;
+    }
+
+    .report-block h3 {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+      color: var(--text-soft);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      background: var(--card);
+    }
+
+    .report-table th,
+    .report-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .report-table th {
+      background: rgba(255,255,255,0.06);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .report-table tr:last-child td { border-bottom: none; }
+
+    .report-table tr:hover td { background: rgba(255,255,255,0.03); }
+
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+      margin-left: 8px;
+    }
+
+    .timeline li {
+      position: relative;
+      padding-bottom: 24px;
+      color: var(--text-soft);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px var(--bg);
+    }
+
+    .timeline li strong { color: var(--text); }
+
+    .timeline-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .sources-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .sources-list a {
+      display: block;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--primary);
+      font-size: 0.9rem;
+      transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+    }
+
+    .sources-list a:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(91,154,255,0.3);
+    }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .flow-step {
+      padding: 18px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    .flow-step strong { color: var(--text); display: block; margin-bottom: 6px; }
+
+    .embed-presentation {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      margin: 24px 0;
+    }
+
+    .embed-presentation iframe {
+      display: block;
+      width: 100%;
+      height: min(80vh, 720px);
+      min-height: 480px;
+      border: none;
+    }
+
     @media (max-width: 980px) {
       .hero { padding: 56px 0 36px; }
       .hero-grid,
@@ -905,6 +1051,9 @@
       .hero-points { grid-template-columns: 1fr; gap: 14px; }
       .section { padding: 36px 0; }
       .section-heading { margin-bottom: 22px; }
+      .report-table { font-size: 0.875rem; }
+      .report-table th, .report-table td { padding: 10px 12px; }
+      .flow-steps { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -950,6 +1099,7 @@
         </a>
       </div>
       <div class="nav-cta">
+        <a class="btn btn-secondary" href="#informe">Informe</a>
         <a class="btn btn-primary" href="#firmar">Firmar ahora</a>
       </div>
     </nav>
@@ -986,6 +1136,7 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#firmar">Quiero firmar</a>
             <a class="btn btn-secondary" href="#diagnostico">Ver diagnóstico</a>
+            <a class="btn btn-secondary" href="#informe">Informe analítico</a>
           </div>
         </div>
 
@@ -1108,6 +1259,130 @@
       </div>
     </section>
 
+    <section class="section" id="informe">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>Informe analítico</h2>
+            <p>Problemas de aparcamiento y acceso al puesto de trabajo en el Hospital Universitario La Paz (Madrid).</p>
+          </div>
+        </div>
+
+        <p class="report-intro"><strong>Resumen ejecutivo.</strong> Los problemas de acceso al trabajo y aparcamiento se explican por una combinación de desajuste estructural oferta–demanda, restricciones en el estacionamiento en superficie (SER-ADHOS, máx. 4 h) y obras/transformaciones que introducen incertidumbre. La capacidad histórica de aparcamiento para personal (502 plazas según documentación del centro) es muy inferior al volumen de profesionales y a la proporción de desplazamientos en coche. La EDM 2018 del CRTM atribuye al área ~13.169 viajes por trabajo y estima ~28,6% en coche conductor (~3.700 entradas diarias en coche asociadas al trabajo). El estacionamiento en superficie está condicionado por el Ámbito Diferenciado Hospitalario: máximo 4 horas, pensado para rotación socio-sanitaria, no para turnos completos.</p>
+
+        <div class="report-block">
+          <h3>Alcance y colectivos afectados</h3>
+          <p style="color: var(--text-soft); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 16px;">La memoria del centro indica 7.845 profesionales (personal propio, cierre 2022) y una encuesta de movilidad dirigida a 8.975 empleados. La EDM 2018 estima además 14.480 viajes por visitas médicas. El área enfrenta presión simultánea de personal y de pacientes/acompañantes, con picos en mañanas y cambios de turno. Turnos 8:00–15:00, 15:00–22:00 y 22:00–8:00 amplifican picos de entrada/salida.</p>
+          <table class="report-table" aria-label="Indicadores de presión diaria (estimación EDM 2018)">
+            <thead>
+              <tr>
+                <th>Concepto</th>
+                <th>Magnitud</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Viajes por trabajo (área hospital)</td><td>13.169</td></tr>
+              <tr><td>Coche conductor (trabajadores) ~28,6%</td><td>~3.700 viajes/día</td></tr>
+              <tr><td>Viajes por visitas médicas</td><td>14.480</td></tr>
+              <tr><td>Plantilla (memoria 2022)</td><td>7.845 profesionales</td></tr>
+              <tr><td>Parking de personal (Plan 2017)</td><td>502 plazas</td></tr>
+              <tr><td>Parking comercial (Interparking)</td><td>1.162 plazas · hasta 19,95 €/24 h</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 12px; font-size: 0.85rem; color: var(--muted);">Fuente: EDM 2018 CRTM, memoria HULAPAZ, SER Madrid, Interparking. Viajes = desplazamientos, no personas únicas.</p>
+        </div>
+
+        <div class="report-block">
+          <h3>Causas identificadas</h3>
+          <ul style="margin: 0; padding-left: 20px; color: var(--text-soft); font-size: 0.9375rem; line-height: 1.7;">
+            <li><strong>Desajuste estructural</strong> entre demanda potencial (~8.000) y oferta de parking de personal (502 plazas).</li>
+            <li><strong>SER-ADHOS:</strong> diseño orientado a rotación socio-sanitaria (máx. 4 h), no a estacionamiento laboral de jornada completa.</li>
+            <li><strong>Coste del aparcamiento de pago</strong> cuando se usa de forma recurrente; compite con visitantes.</li>
+            <li><strong>Obras y cambios en accesos:</strong> Metro Begoña (cierres 2024, reforma accesibilidad 2025 ~18 M€), ramal M-30–Urgencias, obras plataforma logística (~1,42 M€).</li>
+            <li><strong>Contexto urbanístico:</strong> Madrid Nuevo Norte y transformaciones del Nudo Norte que afectan al entorno.</li>
+          </ul>
+        </div>
+
+        <div class="report-block">
+          <h3>Impactos operativos y personales</h3>
+          <p style="color: var(--text-soft); font-size: 0.9375rem; margin-bottom: 12px;"><strong>Operativos:</strong> riesgo de retrasos en cambios de turno; llegadas muy tempranas para “asegurar plaza”; colas de hasta 45 min (testimonios Decide Madrid); dependencia de buses sustitutivos durante obras.</p>
+          <p style="color: var(--text-soft); font-size: 0.9375rem; margin-bottom: 12px;"><strong>Personales y económicos:</strong> coste directo del aparcamiento de pago (hasta ~19,95 €/día); estrés, fatiga y tiempo no remunerado; seguridad vial y siniestralidad in itinere como preocupación del plan de movilidad del hospital.</p>
+          <table class="report-table" aria-label="Referencia de costes aparcamiento">
+            <thead>
+              <tr>
+                <th>Concepto</th>
+                <th>Referencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Parking comercial 24 h</td><td>19,95 €/día (tarifa estándar)</td></tr>
+              <tr><td>Uso recurrente 20 días/mes</td><td>~400 €/mes</td></tr>
+              <tr><td>SER-ADHOS (máx. 4 h)</td><td>hasta 2,75 €/4 h</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="report-block">
+          <h3>Medidas ya tomadas (resumen)</h3>
+          <table class="report-table" aria-label="Medidas por administración">
+            <thead>
+              <tr>
+                <th>Medida</th>
+                <th>Valoración breve</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Reforma accesibilidad Metro Begoña (7 ascensores, ~18 M€)</td><td>Mejora estructural; durante obras hubo cierres.</td></tr>
+              <tr><td>Buses gratuitos durante obras (marzo y agosto 2024)</td><td>Eficaz en ventana de obra; temporal.</td></tr>
+              <tr><td>Ramal M-30–Urgencias (185.000 €)</td><td>Mejora accesos urgencias; efecto indirecto en plantilla.</td></tr>
+              <tr><td>Obras acceso plataforma logística (~1,42 M€)</td><td>Orientado a logística; no incrementa plazas.</td></tr>
+              <tr><td>Lanzadera internas 7:30–22:30 (35 plazas)</td><td>Útil inter-sedes; no cubre turnos noche ni alta demanda.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="report-block">
+          <h3>Cronograma orientativo de propuestas</h3>
+          <ul class="timeline">
+            <li><strong>Corto plazo</strong> Gestión de accesos y colas; convenios con parkings cercanos; extensión/ajuste de lanzaderas.<span class="timeline-meta">Orden: semanas–meses</span></li>
+            <li><strong>Medio plazo</strong> Parking modular temporal (si hay suelo); programa park&ride para personal.<span class="timeline-meta">Orden: 12–24 meses</span></li>
+            <li><strong>Largo plazo</strong> Integración en rediseño Ciudad de la Salud (horizonte ~2032, inversiones del orden de 1.000 M€).<span class="timeline-meta">Gobernanza multiactor</span></li>
+          </ul>
+        </div>
+
+        <div class="report-block">
+          <h3>Flujo de desplazamiento (resumen)</h3>
+          <div class="flow-steps">
+            <div class="flow-step"><strong>Transporte público</strong> Metro/bus → Begoña/paradas → a pie; si hay obras, servicio sustitutivo bus.</div>
+            <div class="flow-step"><strong>Parking de personal</strong> Plazas limitadas → cola/vueltas si no hay plaza.</div>
+            <div class="flow-step"><strong>Parking de pago</strong> Coste elevado si uso recurrente (p. ej. 19,95 €/24 h).</div>
+            <div class="flow-step"><strong>SER-ADHOS</strong> Máx. 4 h; no compatible con turnos largos.</div>
+            <div class="flow-step"><strong>Remoto + lanzadera</strong> Tiempo extra; dependencia del horario del servicio.</div>
+          </div>
+        </div>
+
+        <div class="report-block">
+          <h3>Fuentes y referencias</h3>
+          <ul class="sources-list">
+            <li><a href="https://www.comunidad.madrid/hospital/lapaz/file/2919/download?token=tD0tm9D5" target="_blank" rel="noopener noreferrer">Memoria y Plan de Movilidad – Hospital La Paz</a></li>
+            <li><a href="https://www.crtm.es/media/987212/edm18_doc6_centros_atrac_y_otros_indic.pdf" target="_blank" rel="noopener noreferrer">EDM 2018 – Centros de atracción (CRTM)</a></li>
+            <li><a href="https://www.madrid.es/portales/munimadrid/es/Inicio/Movilidad-y-transportes/Servicio-de-Estacionamiento-Regulado-SER-Horario-delimitacion-territorial-y-ambitos-diferenciados/?vgnextchannel=220e31d3b28fe410VgnVCM1000000b205a0aRCRD&amp;vgnextfmt=default&amp;vgnextoid=6f18e4ce78dd6410VgnVCM1000000b205a0aRCRD" target="_blank" rel="noopener noreferrer">SER – Ámbitos diferenciados (Ayuntamiento Madrid)</a></li>
+            <li><a href="https://www.interparking.es/es/aparcamientos/madrid/la-paz/" target="_blank" rel="noopener noreferrer">Interparking – La Paz</a></li>
+            <li><a href="https://decide.madrid.es/proposals/17723-regulacion-del-parking-de-trabajadores-del-hospital-la-paz" target="_blank" rel="noopener noreferrer">Decide Madrid – Regulación parking trabajadores La Paz</a></li>
+            <li><a href="https://www.comunidad.madrid/sites/default/files/doc/sanidad/memo/memoria_2022_hulapaz_ok.pdf" target="_blank" rel="noopener noreferrer">Memoria 2022 – HULAPAZ</a></li>
+            <li><a href="https://www.comunidad.madrid/hospital/ramonycajal/noticia/comunidad-madrid-transforma-estacion-metro-begona-100-accesible-instalacion-siete-nuevos-ascensores" target="_blank" rel="noopener noreferrer">Reforma estación Metro Begoña</a></li>
+            <li><a href="https://www.emtmadrid.es/Noticias/EMT-amplia-el-servicio-de-la-linea-135-entre-la-pl.aspx" target="_blank" rel="noopener noreferrer">EMT – Línea 135 (sustitución L10)</a></li>
+            <li><a href="https://sanidad.ccoo.es/sanidadmadrid/noticia%3A751943--CCOO_traslada_a_la_Direccion_del_Hospital_La_Paz_el_malestar_de_la_plantilla_ante_la_incertidumbre_sobre_el_aparcamiento_por_las_obras_del_nuevo_hospital%26opc_id%3Dc196995ccdf43f450e2c6a099942ef2d" target="_blank" rel="noopener noreferrer">CCOO – Malestar plantilla por aparcamiento y obras</a></li>
+            <li><a href="https://www.madrid.es/portales/munimadrid/es/Inicio/Cultura-ocio-y-deporte/Publicaciones/Aparcamientos-disuasorios-con-proyecto-aprobado-y-licitacion-de-obras-suspendida/?vgnextchannel=f9e2f073808fe410VgnVCM2000000c205a0aRCRD&amp;vgnextfmt=default&amp;vgnextoid=6b641b003d4a9910VgnVCM200000f921e388RCRD" target="_blank" rel="noopener noreferrer">Aparcamientos disuasorios (Ayuntamiento Madrid)</a></li>
+          </ul>
+        </div>
+
+        <p style="margin-top: 28px; text-align: center;">
+          <a class="btn btn-primary" href="#firmar">Firmar la petición</a>
+        </p>
+      </div>
+    </section>
+
     <section class="section" id="peticion">
       <div class="container">
         <div class="section-heading">
@@ -1216,6 +1491,20 @@
       <div class="container">
         <div class="section-heading">
           <div>
+            <h2>Blueprint de Movilidad — Ver en la web</h2>
+            <p>Consulta la presentación del Blueprint de Movilidad sin descargarla. También disponible en PDF y PPTX para descarga.</p>
+          </div>
+        </div>
+        <div class="embed-presentation">
+          <iframe src="Blueprint_de_Movilidad_La_Paz.pdf" title="Blueprint de Movilidad La Paz — Presentación" allow="fullscreen"></iframe>
+        </div>
+        <p style="margin-top: 12px; color: var(--muted); font-size: 0.9375rem;">
+          <a href="Blueprint_de_Movilidad_La_Paz.pptx" target="_blank" rel="noopener noreferrer">Descargar presentación (PPTX)</a> ·
+          <a href="Blueprint_de_Movilidad_La_Paz.pdf" target="_blank" rel="noopener noreferrer">Descargar PDF</a>
+        </p>
+
+        <div class="section-heading" style="margin-top: 48px;">
+          <div>
             <h2>Vídeo y audio</h2>
             <p>Material audiovisual sobre el problema del aparcamiento en el Hospital La Paz.</p>
           </div>
@@ -1227,6 +1516,24 @@
               <h3>El atasco del hospital</h3>
               <video controls preload="metadata" width="640">
                 <source src="El_atasco_del_hospital.mp4" type="video/mp4" />
+                Tu navegador no soporta la reproducción de vídeo.
+              </video>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-block">
+              <h3>Su lucha empieza antes del turno</h3>
+              <video controls preload="metadata" width="640">
+                <source src="Su_lucha_empieza_antes_del_turno.mp4" type="video/mp4" />
+                Tu navegador no soporta la reproducción de vídeo.
+              </video>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-block">
+              <h3>Crisis de Aparcamiento</h3>
+              <video controls preload="metadata" width="640">
+                <source src="Crisis_de_Aparcamiento.mp4" type="video/mp4" />
                 Tu navegador no soporta la reproducción de vídeo.
               </video>
             </div>
